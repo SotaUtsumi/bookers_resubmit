@@ -1,7 +1,7 @@
-<%= form_with(model: review) do |form| %>
-  <% if review.errors.any? %>
+<%= form_with(model: book) do |form| %>
+  <% if book.errors.any? %>
     <div style="color: red; background-color: #fdd; padding: 10px; margin-bottom: 20px; border-radius: 5px;">
-      <% review.errors.full_messages.each do |message| %>
+      <% book.errors.full_messages.each do |message| %>
         <p style="margin: 0;"><%= message %></p>
       <% end %>
     </div>
@@ -10,14 +10,6 @@
   <div>
     <%= form.label :title, "本のタイトル" %><br>
     <%= form.text_field :title %>
-  </div>
-  <div>
-    <%= form.label :author, "著者名" %><br>
-    <%= form.text_field :author %>
-  </div>
-  <div>
-    <%= form.label :rating, "評価 (1〜5)" %><br>
-    <%= form.number_field :rating, in: 1..5 %>
   </div>
   <div>
     <%= form.label :body, "感想" %><br>

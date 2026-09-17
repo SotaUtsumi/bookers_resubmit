@@ -1,0 +1,13 @@
+<h1><%= @book.title %></h1>
+
+<% if @book.image.attached? %>
+  <div>
+    <%= image_tag @book.image, style: "max-width: 300px;" %>
+  </div>
+<% end %>
+
+<p><strong>感想:</strong><br> <%= @book.body %></p>
+
+<%= link_to 'Edit', edit_book_path(@book) %> |
+<%= link_to 'Back', books_path %>
+<%= link_to '一覧に戻る', books_path %>

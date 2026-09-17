@@ -39,11 +39,9 @@ ActiveRecord::Schema[8.0].define(version: 2026_09_16_143757) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
-  create_table "reviews", force: :cascade do |t|
+  create_table "books", force: :cascade do |t|
     t.string "title"
-    t.string "author"
     t.text "body"
-    t.integer "rating"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
